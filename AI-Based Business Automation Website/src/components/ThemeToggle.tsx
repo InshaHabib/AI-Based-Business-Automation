@@ -37,7 +37,7 @@ export const ThemeToggle = () => {
       <Sun
         className={cn(
           "h-4 w-4 absolute transition-all duration-300",
-          theme === "dark"
+          theme === "light"
             ? "rotate-0 scale-100 opacity-100"
             : "rotate-90 scale-0 opacity-0"
         )}
@@ -45,7 +45,7 @@ export const ThemeToggle = () => {
       <Moon
         className={cn(
           "h-4 w-4 absolute transition-all duration-300",
-          theme === "light"
+          theme === "dark"
             ? "rotate-0 scale-100 opacity-100"
             : "-rotate-90 scale-0 opacity-0"
         )}

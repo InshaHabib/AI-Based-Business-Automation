@@ -2,10 +2,12 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const CTASection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const navigate = useNavigate();
 
   return (
     <section ref={ref} className="section-padding">
@@ -66,6 +68,7 @@ export const CTASection = () => {
               <Button
                 size="xl"
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl"
+                onClick={() => navigate("/contact")}
               >
                 Get Started Free
                 <ArrowRight className="w-5 h-5" />
@@ -74,6 +77,7 @@ export const CTASection = () => {
                 size="xl"
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                onClick={() => navigate("/book-demo")}
               >
                 Schedule Demo
               </Button>

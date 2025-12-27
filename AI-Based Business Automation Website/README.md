@@ -1,73 +1,159 @@
-# Welcome to your Lovable project
+# AI-Based Business Automation Website
 
-## Project info
+A modern, responsive website for showcasing AI-powered business automation solutions. Built with React, TypeScript, and cutting-edge UI components.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern UI/UX**: Beautiful gradient effects, glass morphism, and smooth animations
+- **Dark Mode**: Full dark/light theme support with smooth transitions
+- **Form Validation**: Real-time form validation with Zod schema validation
+- **Responsive Design**: Fully responsive across all devices
+- **Contact Page**: Dedicated contact form with validation
+- **Demo Booking**: Advanced booking system with date/time picker
+- **Multiple Pages**: Home, Solutions, How It Works, Contact, and Book Demo
 
-There are several ways of editing your application.
+## 📁 Project Structure
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/
+│   ├── home/              # Home page sections
+│   │   ├── HeroSection.tsx
+│   │   ├── FeaturesSection.tsx
+│   │   ├── StatsSection.tsx
+│   │   ├── WhyChooseSection.tsx
+│   │   └── CTASection.tsx
+│   ├── layout/            # Layout components
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── ui/                # Reusable UI components (shadcn/ui)
+│   └── ThemeToggle.tsx    # Dark/Light mode toggle
+├── pages/
+│   ├── Index.tsx          # Home page
+│   ├── Solutions.tsx      # Solutions page
+│   ├── HowItWorks.tsx     # How It Works page
+│   ├── Contact.tsx        # Contact form page
+│   ├── BookDemo.tsx       # Demo booking page
+│   └── NotFound.tsx       # 404 page
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utility functions
+└── App.tsx                # Main app component with routing
 ```
 
-**Edit a file directly in GitHub**
+## 🛠️ Technologies Used
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Vite** - Fast build tool and dev server
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **React Router** - Client-side routing
+- **React Hook Form** - Form management
+- **Zod** - Schema validation
+- **Framer Motion** - Animations
+- **shadcn/ui** - UI component library
+- **Tailwind CSS** - Styling
+- **next-themes** - Theme management
+- **date-fns** - Date formatting
 
-**Use GitHub Codespaces**
+## 🎨 Key Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Form Validation
+- Real-time validation with error messages
+- Errors clear automatically when user starts typing
+- Email validation, required fields, min/max length checks
+- Date validation (prevents past dates)
 
-## What technologies are used for this project?
+### Dark Mode
+- System-aware theme detection
+- Manual theme toggle with smooth transitions
+- Persistent theme preference
 
-This project is built with:
+### Responsive Navigation
+- Mobile-friendly hamburger menu
+- Smooth animations
+- Active route highlighting
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📦 Installation
 
-## How can I deploy this project?
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Setup
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+# Clone the repository
+git clone <YOUR_GIT_URL>
 
-Yes, you can!
+# Navigate to project directory
+cd <YOUR_PROJECT_NAME>
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Install dependencies
+npm install
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🌐 Available Routes
+
+- `/` - Home page
+- `/solutions` - Solutions overview
+- `/how-it-works` - How the platform works
+- `/contact` - Contact form
+- `/book-demo` - Demo booking form
+
+## 🎯 Form Features
+
+### Contact Form (`/contact`)
+- Name (required, min 2 characters)
+- Email (required, valid email format)
+- Company (optional)
+- Message (required, min 10 characters)
+
+### Demo Booking Form (`/book-demo`)
+- Name, Email, Company (required)
+- Phone (optional)
+- Preferred Date (calendar picker, future dates only)
+- Preferred Time (dropdown, 9 AM - 5 PM)
+- Additional Notes (optional)
+
+## 🔧 Development
+
+```bash
+# Run development server with hot reload
+npm run dev
+
+# Type checking
+npm run build
+
+# Lint code
+npm run lint
+```
+
+## 📝 Environment Variables
+
+No environment variables required for basic functionality.
+
+## 🚀 Deployment
+
+This project can be deployed to:
+- Vercel (recommended)
+- Netlify
+- GitHub Pages
+- Any static hosting service
+
+Simply run `npm run build` and deploy the `dist` folder.
+
+## 📄 License
+
+This project is built for demonstration purposes.
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!

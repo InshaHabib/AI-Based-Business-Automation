@@ -114,10 +114,10 @@ export const DemoBookingForm = ({ open, onOpenChange }: DemoBookingFormProps) =>
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-[500px] gradient-border bg-card/95 backdrop-blur-xl">
+      <DialogContent className="sm:max-w-[550px] max-h-[90vh] overflow-y-auto gradient-border bg-card/95 backdrop-blur-xl">
         {!isSuccess ? (
           <>
-            <DialogHeader>
+            <DialogHeader className="sticky top-0 bg-card/95 backdrop-blur-xl pb-4 z-10">
               <DialogTitle className="font-display text-2xl font-bold text-foreground">
                 Schedule a Demo
               </DialogTitle>
@@ -127,7 +127,7 @@ export const DemoBookingForm = ({ open, onOpenChange }: DemoBookingFormProps) =>
             </DialogHeader>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-2">
                 <FormField
                   control={form.control}
                   name="name"

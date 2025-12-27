@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,10 +79,10 @@ export const Navbar = () => {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Button variant="ghost" size="sm">
-            Sign In
+          <Button variant="ghost" size="sm" onClick={() => navigate("/contact")}>
+            Contact Us
           </Button>
-          <Button variant="hero" size="sm">
+          <Button variant="hero" size="sm" onClick={() => navigate("/book-demo")}>
             Get Demo
           </Button>
         </div>
@@ -131,10 +132,10 @@ export const Navbar = () => {
                   <span className="text-sm font-medium text-muted-foreground">Theme</span>
                   <ThemeToggle />
                 </div>
-                <Button variant="ghost" className="w-full">
-                  Sign In
+                <Button variant="ghost" className="w-full" onClick={() => navigate("/contact")}>
+                  Contact Us
                 </Button>
-                <Button variant="hero" className="w-full">
+                <Button variant="hero" className="w-full" onClick={() => navigate("/book-demo")}>
                   Get Demo
                 </Button>
               </div>
