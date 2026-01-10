@@ -1,4 +1,4 @@
-# AI-Based Business Automation Website
+# CodeCelix Task AI-Based Business Automation Website
 
 A modern, responsive website for showcasing AI-powered business automation solutions. Built with React, TypeScript, and cutting-edge UI components.
 
